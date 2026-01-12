@@ -14,7 +14,7 @@
       background: #161616;
       font-family: system-ui, sans-serif;
       color: #fff;
-      overflow: hidden; /* no scrolling */
+      overflow: hidden;
     }
 
     .stack {
@@ -67,13 +67,43 @@
       color: #fff;
     }
 
-    /* Tighten on short screens so everything fits */
+    /* Tighten on short screens */
     @media (max-height: 680px) {
       .stack { gap: 6px; padding: 10px; }
       h1 { font-size: 20px; }
       p { font-size: 11px; }
       a { font-size: 13px; padding: 7px 9px; }
       .note { font-size: 10px; margin-top: 2px; }
+    }
+
+    /* Scale up on desktop */
+    @media (min-width: 900px) {
+      .stack {
+        width: min(560px, 90vw);
+        gap: 14px;
+        padding: 20px;
+      }
+
+      h1 {
+        font-size: 36px;
+      }
+
+      p {
+        font-size: 16px;
+        line-height: 1.45;
+      }
+
+      a {
+        max-width: 420px;
+        padding: 14px 16px;
+        font-size: 18px;
+        border-radius: 10px;
+      }
+
+      .note {
+        font-size: 14px;
+        margin-top: 8px;
+      }
     }
   </style>
 </head>
